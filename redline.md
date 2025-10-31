@@ -37,3 +37,4 @@ As the first one, use pstree
 <img width="516" height="53" alt="image" src="https://github.com/user-attachments/assets/6e1e36c6-0f37-432b-b43d-cffe00052f42" />
 
 Answer: C:\Users\Tammam\AppData\Local\Temp\c3912af058\oneetx.exe
+<img width="518" height="144" alt="image" src="https://github.com/user-attachments/assets/d23c3eb7-b2aa-4d95-8a9f-e9d0e5096b51" />
