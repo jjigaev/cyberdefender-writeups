@@ -18,34 +18,40 @@ Begin by consulting public threat intelligence reports, which document the affec
 **Answer:** 2
 
 ## Q2. Determining the age of the malware can help assess the extent of the compromise and track the evolution of malware families and variants. What's the UTC creation time of the .msi malware?
-We will get the hash from the report since its faster.
+Since we have the file. We will get the hash from the report since its faster.
 <img width="1122" height="120" alt="image" src="https://github.com/user-attachments/assets/543de8f5-55e7-4e5d-871b-54b4da1fbd2e" />
 We go to Virus Total, to look for report using the hash we gained from report.
 <img width="931" height="266" alt="image" src="https://github.com/user-attachments/assets/423fae81-a5fc-42ee-91e2-579a9c099668" />
 <img width="608" height="39" alt="image" src="https://github.com/user-attachments/assets/7aa28e9e-f61c-4543-a92a-2ac279883bcd" />
+
 **Answer:** 2023-03-13 06:33
 
 ## Q3. Executable files (.exe) are frequently used as primary or secondary malware payloads, while dynamic link libraries (.dll) often load malicious code or enhance malware functionality. Analyzing files deposited by the Microsoft Software Installer (.msi) is crucial for identifying malicious files and investigating their full potential. Which malicious DLLs were dropped by the .msi file?
-In VirusTotal, under the Relations tab > Bundled Files, We can find the two DLL libraries.
+To understand this question, we need to know that malwares usually works with .dll to load code. In VirusTotal, under the Relations tab > Bundled Files, we can every interaction of malware file, we found the two DLL libraries.
 <img width="1123" height="92" alt="image" src="https://github.com/user-attachments/assets/10911bbd-6310-40aa-ba76-ede7137d4e77" />
+
 **Answer:** ffmpeg.dll, d3dcompiler_47.dll
 
 ## Q4. Recognizing the persistence techniques used in this incident is essential for current mitigation strategies and future defense improvements. What is the MITRE Technique ID employed by the .msi files to load the malicious DLL?
+Look up the Virustotal Behavior tab. On this tab, we can look for different techniques of the malware.
 <img width="1244" height="363" alt="image" src="https://github.com/user-attachments/assets/d23ba1c8-5966-46db-b465-db3e07b9e7e5" />
 <img width="1024" height="241" alt="image" src="https://github.com/user-attachments/assets/9e08cc6c-9ff5-4f48-b7b1-36ce3a90b344" />
+
 **Answer:** T1574
 
 ## Q5. Recognizing the malware type (threat category) is essential to your investigation, as it can offer valuable insight into the possible malicious actions you'll be examining. What is the threat category of the two malicious DLLs?
 <img width="423" height="76" alt="image" src="https://github.com/user-attachments/assets/8e1bf712-e611-4c0f-baec-e42aa23eed09" />
+
 **Answer:** Trojan
 
 ## Q6. As a threat intelligence analyst conducting dynamic analysis, it's vital to understand how malware can evade detection in virtualized environments or analysis systems. This knowledge will help you effectively mitigate or address these evasive tactics. What is the MITRE ID for the virtualization/sandbox evasion techniques used by the two malicious DLLs?
 <img width="1036" height="243" alt="image" src="https://github.com/user-attachments/assets/b36fcfb2-c4c2-42ef-a4c3-e0624dc58bd5" />
+Look up the Virustotal Behavior tab 
 **Answer:** T1497
 
 ## Q7. When conducting malware analysis and reverse engineering, understanding anti-analysis techniques is vital to avoid wasting time. Which hypervisor is targeted by the anti-analysis techniques in the ffmpeg.dll file?
-In the information for the ffmpeg.dll library on VirusTotal, under the Behavior tab here is a reference indicating that it is anti-VMware. But i could find any information about this.
-I guessed it coulde be because of the different hash I used in VirusTotal. To find this information, I extracted the hash of the MSI file and search for it on VirusTotal. <img width="913" height="298" alt="image" src="https://github.com/user-attachments/assets/0b49971e-459e-4de4-954b-5e0522f73ea2" />
+In the information for the ffmpeg.dll library on VirusTotal, under the Behavior tab here is a reference indicating that it is anti-VMware. But i couldnt find any information about this.
+I guessed it could be because of the different hash I used in VirusTotal. To find this information, I extracted the hash of the MSI file and search for it on VirusTotal. <img width="913" height="298" alt="image" src="https://github.com/user-attachments/assets/0b49971e-459e-4de4-954b-5e0522f73ea2" />
 <img width="1052" height="155" alt="image" src="https://github.com/user-attachments/assets/e87768a7-594a-43d4-96ce-45a50056d5cc" />
 
 **Answer:** VMware
