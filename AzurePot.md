@@ -34,8 +34,7 @@ go to /tmp directory to look for file, extract it and get the hash.
 
 ## Q5. What is the name of the botnet in Q4?
 <img width="998" height="255" alt="image" src="https://github.com/user-attachments/assets/5ffd1ba9-f9cd-4546-b4d2-1281a0c70be7" />
-Tsunami <img width="192" height="192" alt="logo-O35E636P" src="https://github.com/user-attachments/assets/a18183fa-f99e-459e-b42a-a9767edb9e1b" />
-
+Tsunami 
 
 ## Q6. What IP address matches the creation timestamp of the botnet agent file in Q4?
 If we look at the created time of the file in Q4 timestamp should be around 11/11/2021 19:09:51 (UTC),  and since there are some comments that relate this sample to activity running Apache Log4j RCE attempts, let's check the logs from Apache, which seems to had been running on the system.
